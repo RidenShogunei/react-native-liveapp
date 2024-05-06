@@ -6,17 +6,10 @@ import { PaperProvider } from 'react-native-paper';
 import { MD3LightTheme as DefaultTheme} from 'react-native-paper';
 // 创建一个 Stack Navigator
 const Stack = createStackNavigator();
-const theme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: 'tomato',
-    secondary: 'yellow',
-  },
-};
+
 function App() {
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Main">
         <Stack.Screen

@@ -16,7 +16,7 @@ const theme = {
 };
 function App() {
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Main">
         <Stack.Screen
