@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Dimensions } from 'react-native';
-import { Card, Button } from 'react-native-paper';
+import { Card } from 'react-native-paper';
 
 const { width: viewportWidth } = Dimensions.get('window');
 
@@ -44,7 +44,7 @@ function MainPage() {
       </ScrollView>
 
       <View>
-        <Card style={{margin: 10}}>
+      <Card style={{margin: 10}}>
           <Card.Content>
             <Text>Card content</Text>
             <Button mode="contained" onPress={() => console.log('Button pressed')}>
