@@ -26,8 +26,8 @@ function App() {
             options={{headerShown: false}}
           />
           <Stack.Screen
-            name="Res"
-            component={Res}
+            name="Main"
+            component={MainPage}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

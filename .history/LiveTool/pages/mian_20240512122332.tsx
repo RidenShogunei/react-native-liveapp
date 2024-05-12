@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, ScrollView, Dimensions, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, Dimensions,StyleSheet} from 'react-native';
 import {Card, Button} from 'react-native-paper';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 const {width: viewportWidth} = Dimensions.get('window');
 
-function MainPage({ navigation }) {
+function MainPage() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(101010100);
   useEffect(() => {
@@ -40,18 +40,10 @@ function MainPage({ navigation }) {
               <Text style={styles.text}>实时天气</Text>
               <Picker
                 selectedValue={city}
-                style={{
-                  height: 50,
-                  width: 120,
-                  borderWidth: 1,
-                  borderColor: '#000',
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.8,
-                  shadowRadius: 2,
-                  elevation: 1,
-                }}
-                onValueChange={(itemValue, itemIndex) => setCity(itemValue)}>
+                style={{height: 50, width: 150,borderBlockColor:}}
+                onValueChange={(itemValue, itemIndex) =>
+                 setCity(itemValue)
+                }>
                 <Picker.Item label="北京" value="101010100" />
                 <Picker.Item label="上海" value="101020100" />
                 <Picker.Item label="嘉定" value="101020500" />
@@ -70,17 +62,7 @@ function MainPage({ navigation }) {
       <View>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>随机餐馆{'\n'}</Text>
-            <Button
-              mode="contained"
-              onPress={() => navigation.navigate('Res')}>
-              Press me
-            </Button>
-          </Card.Content>
-        </Card>
-        <Card style={{margin: 10}}>
-          <Card.Content>
-            <Text style={styles.text}>添加餐馆{'\n'}</Text>
+            <Text>Card content</Text>
             <Button
               mode="contained"
               onPress={() => console.log('Button pressed')}>
@@ -90,11 +72,11 @@ function MainPage({ navigation }) {
         </Card>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>餐馆详情{'\n'}</Text>
+            <Text>More card content</Text>
             <Button
               mode="contained"
               onPress={() => console.log('Another button pressed')}>
-              Press me
+              Press me too
             </Button>
           </Card.Content>
         </Card>

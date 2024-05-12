@@ -4,7 +4,7 @@ import {Card, Button} from 'react-native-paper';
 import {Picker} from '@react-native-picker/picker';
 const {width: viewportWidth} = Dimensions.get('window');
 
-function MainPage({ navigation }) {
+function MainPage() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(101010100);
   useEffect(() => {
@@ -42,7 +42,7 @@ function MainPage({ navigation }) {
                 selectedValue={city}
                 style={{
                   height: 50,
-                  width: 120,
+                  width: 150,
                   borderWidth: 1,
                   borderColor: '#000',
                   shadowColor: '#000',
@@ -70,17 +70,7 @@ function MainPage({ navigation }) {
       <View>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>随机餐馆{'\n'}</Text>
-            <Button
-              mode="contained"
-              onPress={() => navigation.navigate('Res')}>
-              Press me
-            </Button>
-          </Card.Content>
-        </Card>
-        <Card style={{margin: 10}}>
-          <Card.Content>
-            <Text style={styles.text}>添加餐馆{'\n'}</Text>
+            <Text style={styles.text}>选餐馆</Text>
             <Button
               mode="contained"
               onPress={() => console.log('Button pressed')}>
@@ -90,11 +80,21 @@ function MainPage({ navigation }) {
         </Card>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>餐馆详情{'\n'}</Text>
+            <Text>Card content</Text>
+            <Button
+              mode="contained"
+              onPress={() => console.log('Button pressed')}>
+              Press me
+            </Button>
+          </Card.Content>
+        </Card>
+        <Card style={{margin: 10}}>
+          <Card.Content>
+            <Text>More card content</Text>
             <Button
               mode="contained"
               onPress={() => console.log('Another button pressed')}>
-              Press me
+              Press me too
             </Button>
           </Card.Content>
         </Card>

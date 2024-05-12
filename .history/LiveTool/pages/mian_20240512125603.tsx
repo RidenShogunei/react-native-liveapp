@@ -70,7 +70,7 @@ function MainPage({ navigation }) {
       <View>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>随机餐馆{'\n'}</Text>
+            <Text style={styles.text}>选餐馆{'\n'}</Text>
             <Button
               mode="contained"
               onPress={() => navigation.navigate('Res')}>
@@ -90,7 +90,7 @@ function MainPage({ navigation }) {
         </Card>
         <Card style={{margin: 10}}>
           <Card.Content>
-            <Text style={styles.text}>餐馆详情{'\n'}</Text>
+            <Text style={styles.text}>More card content{'\n'}</Text>
             <Button
               mode="contained"
               onPress={() => console.log('Another button pressed')}>

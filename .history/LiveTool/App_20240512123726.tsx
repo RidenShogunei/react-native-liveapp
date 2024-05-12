@@ -27,7 +27,7 @@ function App() {
           />
           <Stack.Screen
             name="Res"
-            component={Res}
+            component={MainPage}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
