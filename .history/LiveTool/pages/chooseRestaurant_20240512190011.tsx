@@ -20,14 +20,14 @@ const RestaurantPicker = ({ navigation }) => {
     console.log(data);
   })();
   console.log('get res',restaurants)
-
+  
   const selectRestaurant = () => {
     const intervalId = setInterval(() => {
         const index = Math.floor(Math.random() * restaurants.length);
         setSelectedRestaurant(restaurants[index]);
-    }, 100);
+    }, 100;
 
-    setTimeout(() => clearInterval(intervalId), 2000); // 2秒后停止改变餐厅名称
+    setTimeout(() => clearInterval(intervalId), 2000); // after 2 seconds, the name will stop changing
 };
   return (
     <View style={styles.container}>
